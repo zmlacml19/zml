@@ -1,0 +1,16 @@
+build
+build-eclipse
+.classpath*
+.externalToolBuilders
+.project
+.settings
+*.launch
+*~
+.idea
+.idea/
+*.iml
+*.ipr
+*.iws
+*.swp
+.arc
+.DS_Store
