@@ -1,0 +1,28 @@
+#!/bin/bash
+PARAMS=$1
+DESC="hadoop service script"
+SCRIPTNAME="hadoop"
+
+case "$1" in
+    start)
+        echo "Starting hadoop service"
+        ;;
+    stop)
+        echo "Stoping hadoop service"
+        ;;
+    create)
+        echo "Create hadoop infrastructure"
+        ;;
+    restart)
+        echo "Restart hadoop service"
+        ;;
+    delete)
+        echo "Delete hadoop infrastructure"
+        ;;
+    *)
+        echo "Usage: $SCRIPTNAME {start|stop|restart|create|delete}" >&2
+        exit 3
+        ;;
+esac
+
+exit 0
