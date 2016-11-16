@@ -15,3 +15,4 @@ build-eclipse
 .arc
 .DS_Store
 conf/*.property
+benchmark/HOS_2.0/runBenchmark_20.sh
