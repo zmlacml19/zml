@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function copy_conf {
+    `yes | cp -rf $1 $2 1>> $HOS_HOME/logs/info.log 2>> $HOS_HOME/logs/err.log`
+}
+
+function remove_software {
+    `rm -rf $1 1>> $HOS_HOME/logs/info.log 2>> $HOS_HOME/logs/err.log`
+}
+
+function software_tar {
+    `tar xzvf $1 -C $2 1>> $HOS_HOME/logs/info.log 2>> $HOS_HOME/logs/err.log`
+}
+
+function kill_running_server {
+    `ps -ef | grep $1 | grep -v grep | sed 's/\s\s*/ /g' | cut  -d ' ' -f 2 | xargs kill -9 1>> $HOS_HOME/logs/info.log 2>> $HOS_HOME/logs/err.log`
+
+}
